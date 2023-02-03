@@ -10,6 +10,6 @@ class AddTaskView extends StatefulWidget {
 class _AddTaskViewState extends State<AddTaskView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Material();
   }
 }

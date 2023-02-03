@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zarity/add_task_view.dart';
+import 'package:zarity/constants.dart';
 import 'package:zarity/first_view.dart';
 import 'package:zarity/search_view.dart';
 import 'package:zarity/user_analytics.dart';
@@ -30,25 +32,8 @@ class _HomeViewState extends State<HomeView> {
         child: currentScreen,
         bucket: bucket,
       ),
-      floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.blueAccent,
-          child: Icon(Icons.add, color: Colors.white),
-          onPressed: () {
-            showModalBottomSheet(
-                context: context,
-                isScrollControlled: true,
-                builder: (context) => SingleChildScrollView(
-                        child: Container(
-                      padding: EdgeInsets.only(
-                          bottom: MediaQuery.of(context).viewInsets.bottom),
-                      child: AddTaskView(),
-                    )));
-          }),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        color: Color.fromARGB(255, 217, 217, 217),
-        notchMargin: 10,
+        color: Colors.white,
         child: Container(
             height: 60,
             child: Row(
@@ -58,7 +43,7 @@ class _HomeViewState extends State<HomeView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     MaterialButton(
-                      minWidth: 90,
+                      minWidth: 94,
                       onPressed: () {
                         setState(() {
                           currentScreen = FirstView();
@@ -72,12 +57,20 @@ class _HomeViewState extends State<HomeView> {
                               Icons.home,
                               color: currentIndex == 0
                                   ? Colors.blueAccent
-                                  : Colors.white,
+                                  : Colors.black,
                             ),
+                            Text("Home",
+                                style: TextStyle(
+                                    color: currentIndex == 0
+                                        ? Colors.blueAccent
+                                        : Colors.black,
+                                    fontFamily:
+                                        GoogleFonts.openSans().fontFamily,
+                                    fontSize: 11))
                           ]),
                     ),
                     MaterialButton(
-                      minWidth: 40,
+                      minWidth: 94,
                       onPressed: () {
                         setState(() {
                           currentScreen = UserProfile();
@@ -91,17 +84,20 @@ class _HomeViewState extends State<HomeView> {
                               Icons.person,
                               color: currentIndex == 1
                                   ? Colors.blueAccent
-                                  : Colors.white,
+                                  : Colors.black,
                             ),
+                            Text("Profile",
+                                style: TextStyle(
+                                    color: currentIndex == 1
+                                        ? Colors.blueAccent
+                                        : Colors.black,
+                                    fontFamily:
+                                        GoogleFonts.openSans().fontFamily,
+                                    fontSize: 11))
                           ]),
                     ),
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
                     MaterialButton(
-                      minWidth: 40,
+                      minWidth: 94,
                       onPressed: () {
                         setState(() {
                           currentScreen = SearchView();
@@ -115,12 +111,20 @@ class _HomeViewState extends State<HomeView> {
                               Icons.search_rounded,
                               color: currentIndex == 2
                                   ? Colors.blueAccent
-                                  : Colors.white,
+                                  : Colors.black,
                             ),
+                            Text("Search",
+                                style: TextStyle(
+                                    color: currentIndex == 2
+                                        ? Colors.blueAccent
+                                        : Colors.black,
+                                    fontFamily:
+                                        GoogleFonts.openSans().fontFamily,
+                                    fontSize: 11))
                           ]),
                     ),
                     MaterialButton(
-                      minWidth: 90,
+                      minWidth: 94,
                       onPressed: () {
                         setState(() {
                           currentScreen = UserAnalytics();
@@ -134,12 +138,63 @@ class _HomeViewState extends State<HomeView> {
                               Icons.bar_chart_rounded,
                               color: currentIndex == 3
                                   ? Colors.blueAccent
-                                  : Colors.white,
+                                  : Colors.black,
                             ),
+                            Text("Analytics",
+                                style: TextStyle(
+                                    color: currentIndex == 3
+                                        ? Colors.blueAccent
+                                        : Colors.black,
+                                    fontFamily:
+                                        GoogleFonts.openSans().fontFamily,
+                                    fontSize: 11))
                           ]),
                     ),
                   ],
                 ),
+                // Row(
+                //   crossAxisAlignment: CrossAxisAlignment.start,
+                //   children: <Widget>[
+                //     MaterialButton(
+                //       minWidth: 50,
+                //       onPressed: () {
+                //         setState(() {
+                //           currentScreen = SearchView();
+                //           currentIndex = 2;
+                //         });
+                //       },
+                //       child: Column(
+                //           mainAxisAlignment: MainAxisAlignment.center,
+                //           children: [
+                //             Icon(
+                //               Icons.search_rounded,
+                //               color: currentIndex == 2
+                //                   ? Colors.blueAccent
+                //                   : Colors.black,
+                //             ),
+                //           ]),
+                //     ),
+                //     MaterialButton(
+                //       minWidth: 50,
+                //       onPressed: () {
+                //         setState(() {
+                //           currentScreen = UserAnalytics();
+                //           currentIndex = 3;
+                //         });
+                //       },
+                //       child: Column(
+                //           mainAxisAlignment: MainAxisAlignment.center,
+                //           children: [
+                //             Icon(
+                //               Icons.bar_chart_rounded,
+                //               color: currentIndex == 3
+                //                   ? Colors.blueAccent
+                //                   : Colors.black,
+                //             ),
+                //           ]),
+                //     ),
+                //   ],
+                // ),
               ],
             )),
       ),
