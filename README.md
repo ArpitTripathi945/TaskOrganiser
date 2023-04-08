@@ -22,6 +22,6 @@ Task Organiser is an application made for people to organise their tasks. The ap
   <tr>
     <td><img src="UITaskOrganiser/detail.png" width=270 height=500></td>
     <td><img src="UITaskOrganiser/bbar.png" width=270 height=500></td>
-    <td><img src="UITaskOrganiser/drawer.jpg" width=270 height=500></td>
+    <td><img src="UITaskOrganiser/drawer.png" width=270 height=500></td>
   </tr>
  </table>
