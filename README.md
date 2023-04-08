@@ -1,16 +1,27 @@
-# zarity
+# TaskOrganiser 
+Task Organiser is an application made for people to organise their tasks. The application helps user to view their assigned taks in a certain fashionly manner. They can viw the details of the task such as deadline and work assigned. 
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+    <td>Home Page</td>
+     <td>Welcome View</td>
+     <td>Task View</td>
+  </tr>
+  <tr>
+    <td><img src="UITaskOrganiser/home.png" width=270 height=500></td>
+    <td><img src="UITaskOrganiser/welcome.png" width=270 height=500></td>
+    <td><img src="UITaskOrganiser/gtask.png" width=270 height=500></td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+    <td>Detail View</td>
+     <td>Navigation Bar</td>
+     <td>Drawer Page</td>
+  </tr>
+  <tr>
+    <td><img src="UITaskOrganiser/detail.png" width=270 height=500></td>
+    <td><img src="UITaskOrganiser/bbar.png" width=270 height=500></td>
+    <td><img src="UITaskOrganiser/drawer.jpg" width=270 height=500></td>
+  </tr>
+ </table>
